@@ -1,306 +1,220 @@
 ﻿{
-  "DataContractVersion": "1.1",
+  "DataContractVersion": "1.0",
   "DocumentTypes": [
     {
-      "DocumentTypeId": "Finance.NoCategory.Invoices",
+      "DocumentTypeId": "Finance.Incoming.Invoices",
       "Group": "Finance",
       "Category": "Incoming",
       "Name": "Invoices",
-      "OptionalUniqueIdentifier": "",
+      "OptionalUniqueIdentifier": null,
       "TypeField": {
-        "FieldId": "Finance.NoCategory.Invoices.DocumentType",
+        "FieldId": "Finance.Incoming.Invoices.DocumentType",
         "FieldName": "Document Type"
       },
       "Fields": [
         {
-          "FieldId": "Finance.NoCategory.Invoices.InvoiceNumber",
+          "FieldId": "Finance.Incoming.Invoices.InvoiceNumber",
           "FieldName": "Invoice Number",
           "IsMultiValue": false,
-          "Type": "Number",
+          "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#038a18"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "v"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Invoices.InvoiceDate",
+          "FieldId": "Finance.Incoming.Invoices.InvoiceDate",
           "FieldName": "Invoice Date",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fa6616"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "c"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Invoices.VendorAddress",
+          "FieldId": "Finance.Incoming.Invoices.VendorAddress",
           "FieldName": "Vendor Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#8a97a0"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "e"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Invoices.TotalAmount",
+          "FieldId": "Finance.Incoming.Invoices.TotalAmount",
           "FieldName": "Total Amount",
           "IsMultiValue": false,
           "Type": "Number",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#6eb84a"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "a"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Invoices.Lineitems",
-          "FieldName": "Line items",
+          "FieldId": "Finance.Incoming.Invoices.LineItems",
+          "FieldName": "Line Items",
           "IsMultiValue": false,
-          "Type": "Number",
+          "Type": "Table",
           "DeriveFieldsFormat": "",
-          "Components": [],
-          "SetValues": [],
-          "Metadata": [
+          "Components": [
             {
-              "Key": "Color",
-              "Value": "#ea57ba"
+              "FieldId": "Finance.Incoming.Invoices.LineItems.Description",
+              "FieldName": "Description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
             },
             {
-              "Key": "Hotkey",
-              "Value": "l"
+              "FieldId": "Finance.Incoming.Invoices.LineItems.Quantity",
+              "FieldName": "Quantity",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Finance.Incoming.Invoices.LineItems.UnitPrice",
+              "FieldName": "Unit Price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
+            },
+            {
+              "FieldId": "Finance.Incoming.Invoices.LineItems.LinePrice",
+              "FieldName": "Line Price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": []
             }
-          ]
+          ],
+          "SetValues": []
         }
       ]
     },
     {
-      "DocumentTypeId": "Finance.NoCategory.Form10-K",
+      "DocumentTypeId": "Finance.Incoming.Form10-K",
       "Group": "Finance",
       "Category": "Incoming",
       "Name": "Form 10-K",
-      "OptionalUniqueIdentifier": "",
+      "OptionalUniqueIdentifier": null,
       "TypeField": {
-        "FieldId": "Finance.NoCategory.Form10-K.DocumentType",
+        "FieldId": "Finance.Incoming.Form10-K.DocumentType",
         "FieldName": "Document Type"
       },
       "Fields": [
         {
-          "FieldId": "Finance.NoCategory.Form10-K.CompanyName",
+          "FieldId": "Finance.Incoming.Form10-K.CompanyName",
           "FieldName": "Company Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#038a18"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "c"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Form10-K.BLSheet",
+          "FieldId": "Finance.Incoming.Form10-K.BLSheet",
           "FieldName": "BL Sheet",
           "IsMultiValue": false,
           "Type": "Table",
           "DeriveFieldsFormat": "",
           "Components": [
             {
-              "FieldId": "Finance.NoCategory.Form10-K.BLSheet.Assets",
-              "FieldName": "Assets",
+              "FieldId": "Finance.Incoming.Form10-K.BLSheet.BalanceSheetItem",
+              "FieldName": "Balance Sheet Item",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form10-K.BLSheet.CurrentYear",
+              "FieldId": "Finance.Incoming.Form10-K.BLSheet.CurrentYear",
               "FieldName": "Current Year",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form10-K.BLSheet.PreviousYear",
+              "FieldId": "Finance.Incoming.Form10-K.BLSheet.PreviousYear",
               "FieldName": "Previous Year",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             }
           ],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fa6616"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "l"
-            }
-          ]
+          "SetValues": []
         }
       ]
     },
     {
-      "DocumentTypeId": "Finance.NoCategory.Form4",
+      "DocumentTypeId": "Finance.Incoming.Form4",
       "Group": "Finance",
       "Category": "Incoming",
       "Name": "Form 4",
-      "OptionalUniqueIdentifier": "",
+      "OptionalUniqueIdentifier": null,
       "TypeField": {
-        "FieldId": "Finance.NoCategory.Form4.DocumentType",
+        "FieldId": "Finance.Incoming.Form4.DocumentType",
         "FieldName": "Document Type"
       },
       "Fields": [
         {
-          "FieldId": "Finance.NoCategory.Form4.ReportingPersonName",
+          "FieldId": "Finance.Incoming.Form4.ReportingPersonName",
           "FieldName": "Reporting Person Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#038a18"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "r"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Form4.ReportingPersonAddress",
+          "FieldId": "Finance.Incoming.Form4.ReportingPersonAddress",
           "FieldName": "Reporting Person Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fa6616"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "e"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Form4.IssuerName",
+          "FieldId": "Finance.Incoming.Form4.IssuerName",
           "FieldName": "Issuer Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#8a97a0"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "a"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Form4.DateofEarliestTransaction",
+          "FieldId": "Finance.Incoming.Form4.DateofEarliestTransaction",
           "FieldName": "Date of Earliest Transaction",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#6eb84a"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "l"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Form4.AmendmentDate",
+          "FieldId": "Finance.Incoming.Form4.AmendmentDate",
           "FieldName": "Amendment Date",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#e422cf"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "m"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.Form4.Relationship",
+          "FieldId": "Finance.Incoming.Form4.Relationship",
           "FieldName": "Relationship",
-          "IsMultiValue": false,
+          "IsMultiValue": true,
           "Type": "Set",
           "DeriveFieldsFormat": "",
           "Components": [],
@@ -309,702 +223,471 @@
             "Officer",
             "10% Owner",
             "Other"
-          ],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#8a97a0"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "h"
-            }
           ]
         },
         {
-          "FieldId": "Finance.NoCategory.Form4.NDSecurities",
+          "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities",
           "FieldName": "ND Securities",
           "IsMultiValue": false,
           "Type": "Table",
           "DeriveFieldsFormat": "",
           "Components": [
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.Title",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.Title",
               "FieldName": "Title",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.TransactionDate",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.TransactionDate",
               "FieldName": "Transaction Date",
               "IsMultiValue": false,
               "Type": "Date",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.DeemedExecutionDate",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.DeemedExecutionDate",
               "FieldName": "Deemed Execution Date",
               "IsMultiValue": false,
               "Type": "Date",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.Transactioncode",
-              "FieldName": "Transaction code",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.TransactionCode",
+              "FieldName": "Transaction Code",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.SecurityAmount",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.SecurityAmount",
               "FieldName": "Security Amount",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.AcquiredorDisposed",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.AcquiredorDisposed",
               "FieldName": "Acquired or Disposed",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.SecurityPrice",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.SecurityPrice",
               "FieldName": "Security Price",
               "IsMultiValue": false,
-              "Type": "Number",
+              "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.BeneficiallyOwned",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.BeneficiallyOwned",
               "FieldName": "Beneficially Owned",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.Ownership",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.Ownership",
               "FieldName": "Ownership",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.Form4.NDSecurities.NatureofOwnership",
+              "FieldId": "Finance.Incoming.Form4.NonDerivativeSecurities.NatureofOwnership",
               "FieldName": "Nature of Ownership",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             }
           ],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#d915c0"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "c"
-            }
-          ]
+          "SetValues": []
         }
       ]
     },
     {
-      "DocumentTypeId": "Finance.NoCategory.AccountCreationform",
+      "DocumentTypeId": "Finance.Incoming.AccountCreationForm",
       "Group": "Finance",
       "Category": "Incoming",
-      "Name": "Account Creation form",
-      "OptionalUniqueIdentifier": "",
+      "Name": "Account Creation Form",
+      "OptionalUniqueIdentifier": null,
       "TypeField": {
-        "FieldId": "Finance.NoCategory.AccountCreationform.DocumentType",
+        "FieldId": "Finance.Incoming.AccountCreationForm.DocumentType",
         "FieldName": "Document Type"
       },
       "Fields": [
         {
-          "FieldId": "Finance.NoCategory.AccountCreationform.ApplicationType",
+          "FieldId": "Finance.Incoming.AccountCreationForm.ApplicationType",
           "FieldName": "Application Type",
           "IsMultiValue": false,
           "Type": "Boolean",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#038a18"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "a"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.AccountCreationform.ApplicationDate",
+          "FieldId": "Finance.Incoming.AccountCreationForm.ApplicationDate",
           "FieldName": "Application Date",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fa6616"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "l"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.AccountCreationform.CIFNumber",
+          "FieldId": "Finance.Incoming.AccountCreationForm.CIFNumber",
           "FieldName": "CIF Number",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#8a97a0"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "c"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.AccountCreationform.AccountNumber",
+          "FieldId": "Finance.Incoming.AccountCreationForm.AccountNumber",
           "FieldName": "Account Number",
           "IsMultiValue": false,
-          "Type": "Number",
+          "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#6eb84a"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "m"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.AccountCreationform.NameoftheEntity",
+          "FieldId": "Finance.Incoming.AccountCreationForm.NameoftheEntity",
           "FieldName": "Name of the Entity",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#f92bc2"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "e"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.AccountCreationform.PlaceofIncorporation",
+          "FieldId": "Finance.Incoming.AccountCreationForm.PlaceofIncorporation",
           "FieldName": "Place of Incorporation",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#dd9787"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "r"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.AccountCreationform.CustomerAddress",
+          "FieldId": "Finance.Incoming.AccountCreationForm.CustomerAddress",
           "FieldName": "Customer Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#3ddb77"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "q"
-            }
-          ]
+          "SetValues": []
         }
       ]
     },
     {
-      "DocumentTypeId": "Finance.NoCategory.PurchaseOrder",
+      "DocumentTypeId": "Finance.Incoming.PurchaseOrder",
       "Group": "Finance",
       "Category": "Incoming",
       "Name": "Purchase Order",
-      "OptionalUniqueIdentifier": "",
+      "OptionalUniqueIdentifier": null,
       "TypeField": {
-        "FieldId": "Finance.NoCategory.PurchaseOrder.DocumentType",
+        "FieldId": "Finance.Incoming.PurchaseOrder.DocumentType",
         "FieldName": "Document Type"
       },
       "Fields": [
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.PONumber",
+          "FieldId": "Finance.Incoming.PurchaseOrder.PONumber",
           "FieldName": "PO Number",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#038a18"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "m"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.PODate",
+          "FieldId": "Finance.Incoming.PurchaseOrder.PODate",
           "FieldName": "PO Date",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fa6616"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "a"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.ClientName",
+          "FieldId": "Finance.Incoming.PurchaseOrder.ClientName",
           "FieldName": "Client Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#8a97a0"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "c"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.ClientAddress",
+          "FieldId": "Finance.Incoming.PurchaseOrder.ClientAddress",
           "FieldName": "Client Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#6eb84a"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "l"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.VendorName",
+          "FieldId": "Finance.Incoming.PurchaseOrder.VendorName",
           "FieldName": "Vendor Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#e169be"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "v"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.VendorAddress",
+          "FieldId": "Finance.Incoming.PurchaseOrder.VendorAddress",
           "FieldName": "Vendor Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#63d69c"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "e"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.ShippingName",
+          "FieldId": "Finance.Incoming.PurchaseOrder.ShippingName",
           "FieldName": "Shipping Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#1527cc"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "h"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.DeliveryDate",
+          "FieldId": "Finance.Incoming.PurchaseOrder.DeliveryDate",
           "FieldName": "Delivery Date",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fca027"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "r"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.PurchaseOrder.POItems",
+          "FieldId": "Finance.Incoming.PurchaseOrder.POItems",
           "FieldName": "PO Items",
           "IsMultiValue": false,
           "Type": "Table",
           "DeriveFieldsFormat": "",
           "Components": [
             {
-              "FieldId": "Finance.NoCategory.PurchaseOrder.POItems.ItemCode",
+              "FieldId": "Finance.Incoming.PurchaseOrder.POItems.LineNumber",
               "FieldName": "Line Number",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.PurchaseOrder.POItems.ItemName",
+              "FieldId": "Finance.Incoming.PurchaseOrder.POItems.ItemDescription",
               "FieldName": "Item Description",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.PurchaseOrder.POItems.Quantity",
+              "FieldId": "Finance.Incoming.PurchaseOrder.POItems.Quantity",
               "FieldName": "Quantity",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.PurchaseOrder.POItems.ItemPrice",
+              "FieldId": "Finance.Incoming.PurchaseOrder.POItems.UnitPrice",
               "FieldName": "Unit Price",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             },
             {
-              "FieldId": "Finance.NoCategory.PurchaseOrder.POItems.Total",
+              "FieldId": "Finance.Incoming.PurchaseOrder.POItems.LineAmount",
               "FieldName": "Line Amount",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
-              "SetValues": [],
-              "Metadata": []
+              "SetValues": []
             }
           ],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#90be9c"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "q"
-            }
-          ]
+          "SetValues": []
         }
       ]
     },
     {
-      "DocumentTypeId": "Finance.NoCategory.UtilityBills",
+      "DocumentTypeId": "Finance.Incoming.UtlityBills",
       "Group": "Finance",
       "Category": "Incoming",
-      "Name": "Utility Bills",
-      "OptionalUniqueIdentifier": "",
+      "Name": "Utlity Bills",
+      "OptionalUniqueIdentifier": null,
       "TypeField": {
-        "FieldId": "Finance.NoCategory.UtilityBills.DocumentType",
+        "FieldId": "Finance.Incoming.UtlityBills.DocumentType",
         "FieldName": "Document Type"
       },
       "Fields": [
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.BillName",
+          "FieldId": "Finance.Incoming.UtlityBills.BillName",
           "FieldName": "Bill Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#038a18"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "l"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.BillingAddress",
+          "FieldId": "Finance.Incoming.UtlityBills.BillingAddress",
           "FieldName": "Billing Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fa6616"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "g"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.VendorName",
+          "FieldId": "Finance.Incoming.UtlityBills.VendorName",
           "FieldName": "Vendor Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#8a97a0"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "v"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.VendorAddress",
-          "FieldName": "Vendor Address ",
+          "FieldId": "Finance.Incoming.UtlityBills.VendorAddress",
+          "FieldName": "Vendor Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#6eb84a"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "e"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.AccountNumber",
+          "FieldId": "Finance.Incoming.UtlityBills.AccountNumber",
           "FieldName": "Account Number",
           "IsMultiValue": false,
-          "Type": "Number",
+          "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#6500f2"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "a"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.TotalAmount",
+          "FieldId": "Finance.Incoming.UtlityBills.InvoiceNumber",
+          "FieldName": "Invoice Number",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Finance.Incoming.UtlityBills.TotalAmount",
           "FieldName": "Total Amount",
           "IsMultiValue": false,
           "Type": "Number",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#f9c342"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "m"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.InvoiceDate",
+          "FieldId": "Finance.Incoming.UtlityBills.InvoiceDate",
           "FieldName": "Invoice Date",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#421ccb"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "c"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.DueDate",
+          "FieldId": "Finance.Incoming.UtlityBills.DueDate",
           "FieldName": "Due Date",
           "IsMultiValue": false,
           "Type": "Date",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fca027"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "q"
-            }
-          ]
+          "SetValues": []
         },
         {
-          "FieldId": "Finance.NoCategory.UtilityBills.PaymentAddress",
+          "FieldId": "Finance.Incoming.UtlityBills.PaymentAddress",
           "FieldName": "Payment Address",
           "IsMultiValue": false,
           "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#e2357a"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "y"
-            }
-          ]
+          "SetValues": []
+        },
+        {
+          "FieldId": "Finance.Incoming.UtlityBills.ServiceFromDate",
+          "FieldName": "Service From Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Finance.Incoming.UtlityBills.ServiceToDate",
+          "FieldName": "Service To Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Finance.Incoming.UtlityBills.PaymentTerms",
+          "FieldName": "Payment Terms",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Finance.Incoming.UtlityBills.PreviousBalance",
+          "FieldName": "Previous Balance",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
+        },
+        {
+          "FieldId": "Finance.Incoming.UtlityBills.UtilityBillDocumentType",
+          "FieldName": "Utility Bill Document Type",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": []
         }
       ]
     }
@@ -1125,10 +808,6 @@
     {
       "Name": "Telugu",
       "Code": "tel"
-    },
-    {
-      "Name": "Turkish",
-      "Code": "tur"
     }
   ]
 }
